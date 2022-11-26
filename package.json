@@ -16,7 +16,9 @@
         "@babel/parser": "^7.20.3",
         "@babel/template": "^7.18.10",
         "@babel/traverse": "^7.20.1",
-        "@babel/types": "^7.20.2"
+        "@babel/types": "^7.20.2",
+        "babel-plugin-tester": "^10.1.0",
+        "source-map": "^0.7.4"
     },
     "dependencies": {
         "react": "^18.2.0",
