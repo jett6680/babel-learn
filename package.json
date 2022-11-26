@@ -1,12 +1,25 @@
 {
-  "name": "babel-learn",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+    "name": "babel-learn",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@babel/code-frame": "^7.18.6",
+        "@babel/core": "^7.20.2",
+        "@babel/generator": "^7.20.4",
+        "@babel/parser": "^7.20.3",
+        "@babel/template": "^7.18.10",
+        "@babel/traverse": "^7.20.1",
+        "@babel/types": "^7.20.2"
+    },
+    "dependencies": {
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0"
+    }
 }
