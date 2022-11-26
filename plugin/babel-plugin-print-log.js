@@ -7,10 +7,10 @@ const generator = require('@babel/generator').default
 const targetCalleeName = ['log', 'info', 'error', 'debug'].map(item => `console.${item}`);
 
 module.exports = (api, options, dirname) => {
-    console.log(Object.keys(api))
-    console.log(options)
-    console.log(dirname)
-    console.log('-----')
+    // console.log(Object.keys(api))
+    // console.log(options)
+    // console.log(dirname)
+    // console.log('-----')
     const {types, template} = api
     return {
         visitor: {

@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`unknown plugin test snapshot: test snapshot 1`] = `
+
+function sayHi(person) {
+  console.log('nihao')
+  return 'Hello ' + person + '!'
+}
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+function sayHi(person) {
+  console.log("unkown filename: (2, 2)");
+  console.log("nihao");
+  return "Hello " + person + "!";
+}
+
+
+`;
