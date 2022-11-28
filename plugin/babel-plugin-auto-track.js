@@ -30,8 +30,8 @@ module.exports = declare((api, options, dirname) => {
                     })
                     // 说明没有引入 那么就自动引入，并且生成importId以及插入到函数体内的ast
                     if (!state.trackerImportId) {
-                        state.trackerImportId = importModule.addDefault(path, '@pjt/tracker', {
-                            nameHint: path.scope.generateUid('tracker')
+                        state.trackerImportId = importModule.addDefault(path, options.trackerPath, {
+                            nameHint: path.scope.generateUid(options.trackerPath)
                         }).name;
                     }
                     state.trackerAST = api.template.statement(`${state.trackerImportId}()`)();
