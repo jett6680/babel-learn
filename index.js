@@ -2,14 +2,34 @@ const fs = require('fs')
 const { transformSync } = require('@babel/core')
 //const printLogInfoPlugin = require('./plugin/babel-plugin-print-log')
 const autoTrackPlugin = require('./plugin/babel-plugin-auto-track')
-const sourceCode = fs.readFileSync('./src/index2.js', 'utf8')
+const i18nPlugin = require('./plugin/babel-plugin-i18n')
+// const sourceCode = fs.readFileSync('./src/index2.js', 'utf8')
+const sourceCode = fs.readFileSync('./src/index3.js', 'utf8')
+
+// const { code, map } = transformSync(sourceCode, {
+//     plugins: [
+//         [
+//             autoTrackPlugin,
+//             {
+//                 trackerPath: '@pjt/tracker'
+//             }
+//         ]
+//     ],
+//     parserOpts: {
+//         sourceType: 'unambiguous',
+//         plugins: ['jsx']
+//     },
+//     sourceMap: true
+// })
+//
+// console.log(code)
 
 const { code, map } = transformSync(sourceCode, {
     plugins: [
         [
-            autoTrackPlugin,
+            i18nPlugin,
             {
-                trackerPath: '@pjt/tracker'
+                i18nPath: '@pjt/i18n'
             }
         ]
     ],
