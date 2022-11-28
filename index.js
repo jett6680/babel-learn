@@ -1,24 +1,18 @@
-const {transformSync} = require('@babel/core')
-const printLogInfoPlugin = require('./plugin/babel-plugin-print-log')
+const fs = require('fs')
+const { transformSync } = require('@babel/core')
+//const printLogInfoPlugin = require('./plugin/babel-plugin-print-log')
+const autoTrackPlugin = require('./plugin/babel-plugin-auto-track')
+const sourceCode = fs.readFileSync('./src/index2.js', 'utf8')
 
-const sourceCode = `
-  console.log('nihao')
-
-  function say() {
-      console.info('哈哈哈  我是info')
-  }
-
-  console.error('哈哈哈 我是error')
-
-  export default function App() {
-      return (
-          <div> { console.log('jsx print') } </div>
-      )
-  }
-`
-
-const {code, map} = transformSync(sourceCode, {
-    plugins: [printLogInfoPlugin],
+const { code, map } = transformSync(sourceCode, {
+    plugins: [
+        [
+            autoTrackPlugin,
+            {
+                trackerPath: '@pjt/tracker'
+            }
+        ]
+    ],
     parserOpts: {
         sourceType: 'unambiguous',
         plugins: ['jsx']
@@ -27,4 +21,3 @@ const {code, map} = transformSync(sourceCode, {
 })
 
 console.log(code)
-console.log(map)
