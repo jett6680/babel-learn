@@ -9,3 +9,11 @@ https://github.com/jamiebuilds/babel-handbook/blob/master/translations/zh-Hans/u
 # Babel插件手册
 
 https://github.com/jamiebuilds/babel-handbook/blob/master/translations/zh-Hans/plugin-handbook.md
+
+# Babel的AST结构
+
+https://github.com/babel/babel/blob/main/packages/babel-parser/ast/spec.md#privatename
+
+# ESTree的AST结构
+
+https://github.com/estree/estree
