@@ -17,7 +17,7 @@ const { code, map } = transformSync(sourceCode, {
     sourceMap: false
 })
 
-console.log(code)
+// console.log(code)
 
 // const { code, map } = transformSync(sourceCode, {
 //     plugins: [
