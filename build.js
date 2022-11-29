@@ -1,22 +1,34 @@
-import fs from 'fs'
-import * as parser from "@babel/parser"
-import traverse from '@babel/traverse'
-import template from '@babel/template'
-import generate from '@babel/generator'
-import * as t from '@babel/types'
-import { codeFrameColumns } from '@babel/code-frame'
+const template = require('@babel/template').default
 
-const rawLines = `class Foo {
-constructor()
-}`;
-const location = { start: { line: 2, column: 2 } };
+const sourceCode = `
+    test()
+`
 
-const result = codeFrameColumns(rawLines, location, {
-    highlightCode: true,
-    message: '这里错啦'
-});
+const result = template.ast(sourceCode)
 
-console.log(result);
+console.log(result.expression)
+
+// import fs from 'fs'
+// import * as parser from "@babel/parser"
+// import traverse from '@babel/traverse'
+// import template from '@babel/template'
+// import generate from '@babel/generator'
+// import * as t from '@babel/types'
+// import { codeFrameColumns } from '@babel/code-frame'
+
+
+
+// const rawLines = `class Foo {
+// constructor()
+// }`;
+// const location = { start: { line: 2, column: 2 } };
+
+// const result = codeFrameColumns(rawLines, location, {
+//     highlightCode: true,
+//     message: '这里错啦'
+// });
+
+// console.log(result);
 //const a = "var a = 1;";
 //const b = "var b = 2;";
 //const astA = parser.parse(a, {sourceFilename: "a.js"});

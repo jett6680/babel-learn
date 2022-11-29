@@ -24,12 +24,13 @@ const sourceCode = fs.readFileSync('./src/index3.js', 'utf8')
 //
 // console.log(code)
 
-const { code, map } = transformSync(sourceCode, {
+const result = transformSync(sourceCode, {
     plugins: [
         [
             i18nPlugin,
             {
-                i18nPath: '@pjt/i18n'
+                i18nPath: '@pjt/i18n',
+                outputDir: './dist'
             }
         ]
     ],
@@ -40,4 +41,4 @@ const { code, map } = transformSync(sourceCode, {
     sourceMap: true
 })
 
-console.log(code)
+console.log(result.code)

@@ -11,7 +11,7 @@ module.exports = (api, options, dirname) => {
     // console.log(options)
     // console.log(dirname)
     // console.log('-----')
-    const {types, template} = api
+    const { types, template } = api
     return {
         visitor: {
             CallExpression(path, state) {
