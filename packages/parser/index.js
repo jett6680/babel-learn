@@ -1,18 +1,5 @@
 const { Parser, TokenType } = require('acorn')
 
-const sourceCode = `
-  powerjett
-  const name = 'powerjett'
-  const age = 23
-  const sex = true
-  function add(a, b) {
-    return a + b
-  }
-
-  const sum = add(1,2)
-  console.log(sum)
-`
-
 Parser.acorn.keywordTypes["powerjett"] = new TokenType("powerjett", { keyword: "powerjett" });
 
 class MyParser extends Parser {
@@ -42,7 +29,4 @@ class MyParser extends Parser {
   };
 }
 
-
-const node = MyParser.parse(sourceCode, {})
-
-console.log('%j', node)
+module.exports = MyParser
