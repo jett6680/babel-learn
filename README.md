@@ -22,3 +22,7 @@ https://github.com/estree/estree
  
 babel源代码，可配合vscode进行source-map调试
 安装node_modules后，需要讲源码对应的map文件映射到babel-debug目录即可
+
+# 思维导图
+
+Babel7.x.png
