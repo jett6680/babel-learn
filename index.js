@@ -1,7 +1,9 @@
 const fs = require('fs')
 const { transformSync } = require('@babel/core')
-const codeLintPlugin = require('./plugin/babel-plugin-code-lint')
-const sourceCode = fs.readFileSync('./src/index5.js', 'utf8')
+const typesCheck = require('./plugin/babel-plugin-types-check')
+const sourceCode = fs.readFileSync('./src/index6.ts', 'utf8')
+// const codeLintPlugin = require('./plugin/babel-plugin-code-lint')
+// const sourceCode = fs.readFileSync('./src/index5.js', 'utf8')
 // const autoApiDocument = require('./plugin/babel-plugin-auto-api-document')
 // const sourceCode = fs.readFileSync('./src/index4.ts', 'utf8')
 // const printLogInfoPlugin = require('./plugin/babel-plugin-print-log')
@@ -11,9 +13,10 @@ const sourceCode = fs.readFileSync('./src/index5.js', 'utf8')
 // const sourceCode = fs.readFileSync('./src/index3.js', 'utf8')
 
 const { code, map } = transformSync(sourceCode, {
-    plugins: [codeLintPlugin],
+    plugins: [typesCheck],
     parserOpts: {
-        sourceType: 'unambiguous'
+        sourceType: 'unambiguous',
+        plugins: ['typescript']
     },
     sourceMap: false
 })

@@ -54,7 +54,7 @@ class Printer {
     this.buf += node.kind;
     this.space();
     node.declarations.forEach((declaration, index) => {
-      if (index != 0) {
+      if (index !== 0) {
         this.buf += ',';
         this.printColumn++;
       }
