@@ -25,7 +25,7 @@ babel源代码，可配合vscode进行source-map调试
 
 # 思维导图
 
-Babel7.x.png
+[Babel7.x.png](./Babel7.x.png)
 
 - [packages目录下手写版Babel](./packages/core/index.js)
 - [根据API自动生成文档插件](./plugin/babel-plugin-auto-api-document.js)
