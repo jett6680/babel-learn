@@ -26,3 +26,12 @@ babel源代码，可配合vscode进行source-map调试
 # 思维导图
 
 Babel7.x.png
+
+- [packages目录下手写版Babel](./packages/core/index.js)
+- [根据API自动生成文档插件](./plugin/babel-plugin-auto-api-document.js)
+- [自动注入日志打点插件](./plugin/babel-plugin-auto-track.js)
+- [代码语法检测插件(Demo)](./plugin/babel-plugin-code-lint.js)
+- [项目多语言i8n Babel插件](./plugin/babel-plugin-i18n.js)
+- [自动生成模块依赖图插件](./plugin/babel-plugin-module-iterator.js)
+- [console.log增强Babel插件(Demo)](./plugin/babel-plugin-print-log.js)
+- [TS类型检测插件(Demo)](./plugin/babel-plugin-types-check.js)
